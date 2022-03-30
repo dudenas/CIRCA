@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CIRCA</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./favicon_io/site.webmanifest">
+
+
+  <!-- SEO -->
+  <meta name="description" content="Humanity's frontier is defined by its energy and production systems." />
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+
+  <!-- SOCIAL  -->
+  <meta property="og:title" content="CIRCA" />
+  <meta property="og:description" content="Humanity's frontier is defined by its energy and production systems." />
+  <meta property="og:image" content="https://dudenas.net/client/CIRCA/CIRCA-WEB-v1/circa-social.png" />
+  <meta property="og:url" content="index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="CIRCA" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://dudenas.net/client/CIRCA/CIRCA-WEB-v1/circa-social.png" />
+  <meta name="twitter:title" content="CIRCA">
+  <meta name="twitter:description" content="Humanity's frontier is defined by its energy and production systems." />
+
+  <script src="p5.min.js"></script>
+  <script src="p5.dom.min.js"></script>
+  <script src="p5.func.js"></script>
+  <script src="matrix.js"></script>
+  <style>
+    * {
+      -webkit-touch-callout: none;
+      /* iOS Safari */
+      -webkit-user-select: none;
+      /* Safari */
+      -khtml-user-select: none;
+      /* Konqueror HTML */
+      -moz-user-select: none;
+      /* Old versions of Firefox */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
+      user-select: none;
+      /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+      overflow: hidden;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    canvas {
+      display: block;
+    }
+
+
+    body {
+      background-color: black;
+    }
+
+    @font-face {
+      font-family: circaFont;
+      src: url(font/PPNeueMachina-Bold.ttf);
+    }
+
+    .button {
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: translate(-50%, -10%);
+      /* background-color: black; */
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+
+      /* margin: auto; */
+      font-size: 2em;
+      /* line-height: 24px; */
+      /* text-align: center; */
+      font-family: circaFont, monospace, sans-serif;
+
+    }
+
+    .button:hover {
+      text-decoration: underline;
+    }
+
+    #angle,
+    #points {
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%, -10%);
+
+      font-size: 1em;
+      font-family: monospace;
+
+      color: white;
+    }
+
+    #points {
+      top: 50%;
+      right: 10%;
+      transform: translate(10%, -50%);
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="angle">40</div>
+  <div id="points">10 10 40 30 50 80 40</div>
+  <a href="mailto:circle@circa.xyz" class="button">LIAISE</a>
+
+   <!-- SCRIPTS -->
+   <script src="sketch.js"></script>
+</body>
+
+</html>
