@@ -54,6 +54,7 @@ let _trailA = []
 let _trailB = []
 
 let _showTrail = false
+let _showPoints = false
 
 function setup() {
     let canvas = createCanvas(windowWidth, windowHeight);
@@ -217,6 +218,18 @@ function draw() {
     }
     endShape(CLOSE)
 
+    if (_showPoints) {
+        noStroke()
+        fill(255)
+        for (let i = 0; i < pts.length; i++) {
+            const p = pts[i]
+            const txt = `${i} ... ${nf(p.x, 3,1)}`
+            text(txt, p.x + _sw * 3, p.y - _sw * 3)
+            ellipse(p.x, p.y, _sw * 3, _sw * 3)
+        }
+    }
+
+
     // draw GRID
     if (_debug) {
         noStroke();
@@ -249,7 +262,7 @@ function draw() {
 }
 
 function showTrail(trail, projected, idx) {
-    const y = (projected[0].y + projected[6].y)/2
+    const y = (projected[0].y + projected[6].y) / 2
     noFill()
     stroke(255)
     strokeWeight(_sw / 3)
@@ -335,4 +348,12 @@ angleDiv.addEventListener("mouseenter", () => {
 })
 angleDiv.addEventListener("mouseleave", () => {
     _showTrail = false
+})
+
+const pointsDiv = document.getElementById("points")
+pointsDiv.addEventListener("mouseenter", () => {
+    _showPoints = true
+})
+pointsDiv.addEventListener("mouseleave", () => {
+    _showPoints = false
 })
